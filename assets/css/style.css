@@ -1,0 +1,128 @@
+.menu{
+    grid-area: menu1;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: rgba(25, 83, 192, 0.922);
+    color: white;
+}
+.menu2{
+    grid-area: menu2;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: rgba(25, 83, 192, 0.922);
+    color: white;
+}
+.busqueda{
+    grid-area: busqueda1;
+    background-color:lightgray;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productos{
+    grid-area: productos1;
+    background-color: white;
+}
+.paginas{
+    grid-area: paginas1;
+    background-color: white;
+    margin: 0%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie{
+    grid-area: pie1;
+    background-color: rgba(10, 49, 122, 0.999);
+    color: white;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'menu1'
+    'busqueda1'
+    'productos1'
+    'paginas1'
+    'pie1';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto-fit;
+}
+.listado_productos{
+    display:grid; 
+}
+.descripcion{
+    text-align: center;
+    border: 2px solid lightgray;
+    background-color: white;
+    color: black;
+}
+.descripcion h5{
+    margin:10px;
+    padding: 0;
+}
+.descripcion button{
+    background-color: rgb(42, 56, 182);
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.precio{
+    width: 90%;
+    margin:1%
+}
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu2 a{
+    padding: 5%;
+    text-decoration: none;
+    color: white;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+h3{
+    padding: 5px;
+}
+.imgauto{
+    width: 145px;
+    height: 100px;
+}
+.redes_s{
+    margin-top: 5%;
+}
+.paginas img{
+    width: 30%;
+    height: 40%;
+}
+@media (min-width:576px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'menu2 busqueda1'
+        'menu2 productos1'
+        'pie1 paginas1';
+        grid-template-columns: 20% 1fr;
+    }
+    .listado_productos{
+        grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
+    }
+}
+@media only screen and (min-width:576px) {
+    .menu{
+        display: none !important;
+    }
+}
+@media only screen and (max-width:576px) {
+    .menu2{
+        display: none !important;
+    }
+}
